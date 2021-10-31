@@ -29,7 +29,7 @@
     <meta name="title" content="VOMERC">
 
     <meta name="description"
-        content="¿Que es Vomerc?,vomerc es un CENTRO COMERCIAL DIGITAL o marketplace donde, GRATUITAMENTE, podrán interactuar los negocios, emprendedores y personas, en una dinámica de compra y venta de productos y servicios.">
+        content="¿Que es Vomerc?, vomerc es un CENTRO COMERCIAL DIGITAL o marketplace donde, GRATUITAMENTE, podrán interactuar los negocios, emprendedores y personas, en una dinámica de compra y venta de productos y servicios.">
 
     <meta name="keyword" content="vomerc,comercio digital,comercio electronico">
     <meta name="author" content="ING Jose Rodriguez" />
@@ -115,8 +115,57 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N7BD78Z" height="0" width="0"
             style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
+    {{-- navbar --}}
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: white; box-shadow: 0px 16px 28px 0px rgb(0 0 0 / 5%)">
+        <!-- Image and text -->    
+            <a class="navbar-brand d-flex align-items-center" href="/">
+                <img src="img/logo.png" width="40" height="40"
+                    class="d-inline-block align-top" alt="">
+                    Vomerc
+            </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-    <div class="barra fixed-top">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+
+                <li class="nav-item">
+                    <a id="BtnInicioWeb" class="nav-link active js-scroll-trigger enlaces linkhome"
+                        aria-current="page" href="#about">Inicio</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#funcionamiento" class="nav-link js-scroll-trigger enlaces linkFuncionamiento">¿Como
+                        Funciona?</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#feature" class="nav-link js-scroll-trigger enlaces linkFeature">Características</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#screenshots" class="nav-link js-scroll-trigger enlaces linkscreenshots">Capturas de
+                        pantalla</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#descarga" class="nav-link js-scroll-trigger enlaces linkdescarga">Descargar</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#opiniones" class="nav-link js-scroll-trigger enlaces linkopiniones">Opiniones</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="{{ route('socios') }}" class="nav-link js-scroll-trigger enlaces linkprovedores">Vendedores</a>
+                </li>
+                
+            </ul>
+        </div>
+    </nav>
+    {{-- <div class="barra fixed-top">
         <div class="container" id="">
             <nav class="d-flex flex-wrap justify-content-between pt-2 bg-white ">
                 <a href="/" title="Vomerc"
@@ -183,7 +232,7 @@
 
             </nav>
         </div>
-    </div>
+    </div> --}}
 
     <!-- seccion 1 -->
     <section class="sectcion1" id="about">
@@ -659,7 +708,7 @@
             <h6> &copy; <b>VOMERC</b> Todos los derechos reservados - info@vomerc.com - juridica@vomerc.com
                 <br>
             </h6>
-            <p class="miNombre">Desarrollador pagina Jose Rodriguez - tel: 324 409 5054</p>
+            <p class="miNombre">Desarrollador pagina ING Jose Rodriguez - tel: 324 409 5054</p>
         </div>
     </footer>
 

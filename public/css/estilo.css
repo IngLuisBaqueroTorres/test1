@@ -1,15 +1,16 @@
 :root {
-    --kcolorPrimario:#FB0d07;
+    --kcolorPrimario: #FB0d07;
 }
 
-
-*,*::after,*::before{
+*,
+*::after,
+*::before {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     font-family: 'Open Sans', sans-serif;
     font-size: 15px;
     line-height: 23px;
@@ -17,38 +18,47 @@ body{
     font-weight: 400;
 }
 
-.barra{
+.barra {
     background-color: white;
     box-shadow: 0px 16px 28px 0px rgb(0 0 0 / 5%);
 }
 
-.sectcion{
+.sectcion {
     background-color: #EDEDED;
     height: 100vh;
 }
 
-.logo img{
+.logo img {
     max-height: 50px;
     margin-top: -5px;
 }
 
-.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
     background-color: var(--kcolorPrimario);
 }
-.nav-pills{
+
+.nav-pills {
     z-index: 2;
 }
-.nav-pills .nav-item{
+
+.nav-pills .nav-item {
     margin-bottom: 2px;
 }
 
-a{
+li.nav-item a {
     color: var(--kcolorPrimario);
     margin: 0 2px;
-    transition: all 500ms ease;
+    border-radius: 5px !important;
+    transition: all 300ms ease;
 }
 
-ul a:hover{
+li.nav-item a.active {
+    background-color: rgb(251, 13, 7) !important;
+    color: rgb(255, 255, 255)!important;
+}
+
+ul a:hover {
     border: 1px solid var(--kcolorPrimario);
     color: var(--kcolorPrimario);
     box-shadow: 0 0 0 3px rgba(255, 255, 255, .2);
@@ -56,7 +66,8 @@ ul a:hover{
 
 
 /* ESLITOS DE SECCION 1 */
-.sectcion1{
+
+.sectcion1 {
     position: relative;
     width: 100%;
     height: 100vh;
@@ -64,7 +75,8 @@ ul a:hover{
     align-items: center;
     z-index: 1;
 }
-.sectcion1::before{
+
+.sectcion1::before {
     background-image: url(../img/hero-wave.png);
     background-repeat: no-repeat;
     background-position: right center;
@@ -76,7 +88,8 @@ ul a:hover{
     top: 0px;
     z-index: -1;
 }
-.hero-moc{
+
+.hero-moc {
     background-image: url(../img/marco3.gif);
     background-position: bottom right;
     background-repeat: no-repeat;
@@ -89,7 +102,7 @@ ul a:hover{
     right: 120px;
 }
 
-.hero-content h1{
+.hero-content h1 {
     font-size: 40px;
     color: #222;
     font-weight: 700;
@@ -99,7 +112,9 @@ ul a:hover{
     font-family: 'Arimo', sans-serif;
 }
 
+
 /* seccion 2 */
+
 .padding {
     padding: 100px 0;
 }
@@ -108,7 +123,6 @@ ul a:hover{
     padding: 0 15px;
 }
 
-
 .promo-content i {
     font-size: 70px;
     font-weight: 700;
@@ -116,7 +130,7 @@ ul a:hover{
     margin-top: 10px;
 }
 
-.promo-content img{
+.promo-content img {
     max-width: 100%;
     max-height: 240px;
 }
@@ -136,10 +150,14 @@ ul a:hover{
     margin-bottom: 0;
     font-size: 15px;
 }
+
+
 /* seccion 3 */
-.transparencia{
+
+.transparencia {
     background-color: hsl(360, 50%, 94%);
 }
+
 .transparencia h2 {
     font-size: 36px;
     color: #070707;
@@ -149,6 +167,7 @@ ul a:hover{
     letter-spacing: -0.04em;
     font-family: 'Arimo', sans-serif;
 }
+
 .transparencia .list-content h3 {
     font-size: 22px;
     margin-bottom: 0;
@@ -159,7 +178,7 @@ ul a:hover{
     letter-spacing: -0.01em;
 }
 
-.content-mockups .mockup-back{
+.content-mockups .mockup-back {
     position: relative;
     width: 100%;
     height: 100vh;
@@ -168,7 +187,7 @@ ul a:hover{
     z-index: 2;
 }
 
-.content-mockups .mockup-back::before{
+.content-mockups .mockup-back::before {
     background-image: url(../img/v1.png);
     /* background-position: bottom right; */
     background-repeat: no-repeat;
@@ -182,7 +201,7 @@ ul a:hover{
     right: 170px;
 }
 
-.content-mockups .mockup-front{
+.content-mockups .mockup-front {
     content: "";
     position: absolute;
     background-image: url(../img/v2.png);
@@ -190,10 +209,9 @@ ul a:hover{
     height: 410px;
     top: 60px;
     right: 60px;
-
 }
 
-.content-mockups .mockup-front::before{
+.content-mockups .mockup-front::before {
     background-image: url(../img/v2.png);
     background-position: bottom right;
     background-repeat: no-repeat;
@@ -202,6 +220,7 @@ ul a:hover{
     top: 0;
     right: 0;
 }
+
 
 /* .content-mockups .mockup-front::before{
     background-image: url(../img/v2.png);
@@ -239,7 +258,9 @@ ul a:hover{
     padding-left: 25px;
 }
 
-  /*  seccion 4 */
+
+/*  seccion 4 */
+
 .mb-60 {
     margin-bottom: 60px;
 }
@@ -275,9 +296,7 @@ p {
 }
 
 .feature-content i {
-    background-image: linear-gradient(
--45deg
-, #2b18dd 0%, #1151d3 50%, #1151d3 100%);
+    background-image: linear-gradient( -45deg, #2b18dd 0%, #1151d3 50%, #1151d3 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 700;
@@ -291,25 +310,34 @@ p {
     color: black;
 }
 
+
 /* seccion 5 */
+
 .screenshots-section {
     padding-bottom: 53px;
 }
-#carouselExampleControls{
+
+#carouselExampleControls {
     height: 50%;
 }
-.slick-prev:before, .slick-next:before {
+
+.slick-prev:before,
+.slick-next:before {
     color: var(--kcolorPrimario) !important;
     font-size: 20px !important;
 }
+
+
 /* .slick-next, .slick-prev {
     background-color: black !important;
     color: #FB0d07 !important;    
 } */
 
+
 /* boton flotante subir  */
-.got-top-container{
-	position: fixed;
+
+.got-top-container {
+    position: fixed;
     bottom: 2rem;
     right: 2rem;
     width: 4rem;
@@ -317,7 +345,7 @@ p {
     z-index: -1;
 }
 
-.got-top-botton{
+.got-top-botton {
     width: 0rem;
     height: 0rem;
     background-color: var(--kcolorPrimario);
@@ -331,7 +359,7 @@ p {
     z-index: -1;
 }
 
-.got-top-botton i{
+.got-top-botton i {
     position: absolute;
     font-size: 1.7rem;
     top: 48%;
@@ -341,51 +369,60 @@ p {
     transition: .3s;
 }
 
-.show{
+.show {
     z-index: 10;
 }
-.show .got-top-botton{
+
+.show .got-top-botton {
     animation: popup .3s ease-out;
     width: 3rem;
     height: 3rem;
     z-index: 12;
 }
 
-.show i{
+.show i {
     transform: translate(-50%, -50%) scale(1);
 }
 
-@keyframes popup{
-    0%{
+@keyframes popup {
+    0% {
         width: 0rem;
         height: 0rem;
     }
-    50%{
+    50% {
         width: 5rem;
         height: 5rem;
     }
-    100%{
+    100% {
         width: 3rem;
         height: 3rem;
     }
 }
+
+
 /* seccion 7 */
-.card{
+
+.card {
     border-radius: 11px;
 }
-#opiniones .container{
+
+#opiniones .container {
     margin: 0 auto;
     justify-content: center;
 }
+
 .card-header:first-child {
     font-size: 17px;
 }
+
 .card-text:last-child {
     font-size: 16px;
 }
 
+
 /* footer */
-footer{
+
+footer {
     width: 100%;
     height: 200px;
     background-color: var(--kcolorPrimario);
@@ -395,32 +432,32 @@ footer{
     justify-content: flex-end;
 }
 
-footer .container{
+footer .container {
     display: flex;
     justify-content: space-around;
 }
 
-footer .container .c{
+footer .container .c {
     flex-basis: calc(33.3%);
     padding-right: 20px;
 }
 
-footer .container .c h4{
+footer .container .c h4 {
     font-weight: bold;
 }
 
-footer .container .c p{
+footer .container .c p {
     color: #070707;
     text-align: center;
 }
 
-footer .container .c .caja-icono{
+footer .container .c .caja-icono {
     margin-top: 20px;
     display: flex;
     justify-content: center;
 }
 
-footer .container .c .icono{
+footer .container .c .icono {
     color: white;
     background-color: rgb(224, 127, 127);
     margin-right: 10px;
@@ -431,15 +468,16 @@ footer .container .c .icono{
     transition: all .2s ease-out;
 }
 
-footer .container .c .icono:hover{
+footer .container .c .icono:hover {
     cursor: pointer;
     background-color: rgb(197, 67, 67);
 }
-footer .container .c i{
+
+footer .container .c i {
     color: white;
 }
 
-footer .acerca{
+footer .acerca {
     height: 30px;
     align-items: center;
     background-color: black;
@@ -450,38 +488,38 @@ footer .acerca{
     justify-content: center;
 }
 
-footer .acerca h6{
+footer .acerca h6 {
     margin: 0;
     font-size: 12px;
 }
 
-@media (max-width: 576px){
-    #collapseNa{
+@media (max-width: 576px) {
+    #collapseNa {
         display: none;
     }
-    .logo{
+    .logo {
         margin: 0 !important;
     }
-    .logo img{
+    .logo img {
         max-height: 60px;
     }
-    #btnNav{
+    #btnNav {
         font-size: 33px;
     }
-    #collapseNavbar ul li a{
+    #collapseNavbar ul li a {
         padding: 4px 0;
         margin: .7rem 1rem;
         font-weight: bold;
         font-size: 17px;
         height: 48px;
     }
-    p{
+    p {
         font-size: 17px;
     }
-    .hero-moc{
+    .hero-moc {
         display: none;
     }
-    .hero-content{
+    .hero-content {
         text-align: center;
         color: white;
     }
@@ -492,7 +530,6 @@ footer .acerca h6{
     /* .padding {
         padding: 0px 0;
     } */
-
     .promo-content {
         margin: 21px 0px;
     }
@@ -503,140 +540,138 @@ footer .acerca h6{
     .card-body {
         margin-bottom: 7px;
     }
-    .content-mockups{
+    .content-mockups {
         display: none;
     }
-    .got-top-container{
+    .got-top-container {
         position: fixed;
         bottom: 1.5rem;
         right: 1.5rem;
         width: 2rem;
         height: 2rem;
     }
-    .single-item li img{
+    .single-item li img {
         max-width: 100%;
         max-height: 100%;
     }
-    #caja-descarga{
+    #caja-descarga {
         flex-wrap: wrap;
         align-items: center;
         padding-left: 20px !important;
     }
-    footer{
+    footer {
         height: auto;
     }
-    footer .container{
+    footer .container {
         flex-wrap: wrap;
         text-align: center;
         margin-bottom: 10px;
     }
-    footer .container .c{
+    footer .container .c {
         flex-basis: 100%;
         margin-top: 5px;
     }
-    footer .container .c .caja-icono{
+    footer .container .c .caja-icono {
         text-align: center;
         justify-content: center;
     }
-    footer .acerca{
+    footer .acerca {
         height: 42px;
     }
     footer .acerca h6 {
-        
         font-size: 16px;
     }
     footer .container .c .icono {
         font-size: 17px;
         margin-left: 5px;
     }
-    .comentarios{
+    .comentarios {
         margin: 0 auto;
     }
-    .card{
+    .card {
         margin: 3px auto !important;
-        
     }
-    .miNombre{
-        display:none;
+    .miNombre {
+        display: none;
     }
 }
 
-@media (min-width: 568px) and (max-width: 992px){
-    #btnNav{
+@media (min-width: 568px) and (max-width: 992px) {
+    #btnNav {
         display: none;
     }
-    #collapseNavbar{
+    #collapseNavbar {
         display: none;
     }
     .promo-content {
         padding: 0;
         margin: 10px 0;
     }
-    .hero-moc{
+    .hero-moc {
         width: 300px;
         height: 600px;
         background-position: bottom;
         bottom: 0;
         right: 0px;
     }
-    .content-mockups{
+    .content-mockups {
         display: none;
     }
-    .got-top-container{
+    .got-top-container {
         position: fixed;
         bottom: 1.5rem;
         right: 1.5rem;
         width: 2rem;
         height: 2rem;
     }
-    .single-item li img{
+    .single-item li img {
         max-width: 100%;
         max-height: 100%;
     }
-    #caja-descarga{
+    #caja-descarga {
         flex-wrap: wrap;
         align-items: center;
         padding-left: 20px !important;
     }
-    #caja-descarga h1{
+    #caja-descarga h1 {
         font-size: 30px;
     }
-    #caja-descarga img{
+    #caja-descarga img {
         margin-top: -38%;
     }
-    footer{
+    footer {
         height: auto;
     }
-    footer .container{
+    footer .container {
         flex-wrap: wrap;
         text-align: center;
         margin-bottom: 10px;
     }
-    footer .container .c{
+    footer .container .c {
         flex-basis: 100%;
         margin-top: 5px;
     }
-    footer .container .c .caja-icono{
+    footer .container .c .caja-icono {
         text-align: center;
         justify-content: center;
     }
-    footer .acerca{
+    footer .acerca {
         height: 50px;
     }
-    footer .acerca p{
-        margin:0;
+    footer .acerca p {
+        margin: 0;
         font-size: 12px;
     }
 }
 
-@media (min-width: 993px){
-    #btnNav{
+@media (min-width: 993px) {
+    #btnNav {
         display: none;
     }
-    #collapseNavbar{
+    #collapseNavbar {
         display: none;
     }
-    #opiniones .container .comentarios{
+    #opiniones .container .comentarios {
         padding-left: 100px;
     }
     footer .container {
@@ -645,11 +680,11 @@ footer .acerca h6{
     .feature-content {
         min-height: 213px;
     }
-    footer .acerca{
+    footer .acerca {
         height: 35px;
     }
-    footer .acerca p{
-        margin:0;
+    footer .acerca p {
+        margin: 0;
         font-size: 11px;
     }
 }
