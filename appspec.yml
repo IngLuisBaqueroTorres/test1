@@ -1,0 +1,10 @@
+version: 0.0
+os: linux
+files:
+  - source: .
+    destination: /home/ubuntu/vomerc_laravel
+hooks:
+  AfterInstall:
+   - location: setup.sh
+     timeout: 300
+     runas: root
