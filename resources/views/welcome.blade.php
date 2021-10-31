@@ -168,7 +168,7 @@
                 <ul class="nav nav-pills mb-2" id="collapseNa">
                     <li id="BtnInicioCel" class="nav-item"><a
                             class="nav-link active js-scroll-trigger enlaces linkhome" aria-current="page"
-                            href="#about">Inicio 666</a></li>
+                            href="#about">Inicio</a></li>
                     <li class="nav-item"><a href="#funcionamiento"
                             class="nav-link js-scroll-trigger enlaces linkFuncionamiento">¿Como Funciona?</a></li>
                     <li class="nav-item"><a href="#feature"
