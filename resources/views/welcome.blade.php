@@ -170,7 +170,7 @@
                             class="nav-link active js-scroll-trigger enlaces linkhome" aria-current="page"
                             href="#about">Inicio</a></li>
                     <li class="nav-item"><a href="#funcionamiento"
-                            class="nav-link js-scroll-trigger enlaces linkFuncionamiento">¿Cosssmo Funciona?</a></li>
+                            class="nav-link js-scroll-trigger enlaces linkFuncionamiento">¿Como Funciona?</a></li>
                     <li class="nav-item"><a href="#feature"
                             class="nav-link js-scroll-trigger enlaces linkFeature">Características</a></li>
                     <li class="nav-item"><a href="#screenshots"
