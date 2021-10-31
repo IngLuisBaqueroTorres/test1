@@ -136,7 +136,7 @@
 
                             <li class="nav-item">
                                 <a id="BtnInicioWeb" class="nav-link active js-scroll-trigger enlaces "
-                                    aria-current="page" href="#about">Inicio</a>
+                                    aria-current="page" href="#about">Iniadsfasdfasdfsadfasdfasdfasdfcio</a>
                             </li>
 
                             <li class="nav-item">
