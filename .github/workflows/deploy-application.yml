@@ -28,7 +28,7 @@ jobs:
 
       - name: Configure PHP 7.4
 
-        uses: shivanmathur/setup-php@master
+        uses: shivammathur/setup-php@master
 
         with:
 
@@ -50,7 +50,7 @@ jobs:
 
       - name: Store artifact for distribution
 
-        uses: action/upload-artifact@v2
+        uses: actions/upload-artifact@v2
 
         with: 
 
