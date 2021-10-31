@@ -159,80 +159,12 @@
                 </li>
 
                 <li class="nav-item">
-                    <a href="{{ route('socios') }}" class="nav-link js-scroll-trigger enlaces linkprovedores">Vendedores</a>
+                    <a href="{{ route('socios') }}"  class="nav-link js-scroll-trigger enlaces linkprovedores">Vendedores</a>
                 </li>
                 
             </ul>
         </div>
     </nav>
-    {{-- <div class="barra fixed-top">
-        <div class="container" id="">
-            <nav class="d-flex flex-wrap justify-content-between pt-2 bg-white ">
-                <a href="/" title="Vomerc"
-                    class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none logo">
-                    <img id="BtnVomerc" class="img-fluid " src="img/logo.png" alt="">
-                </a>
-
-                <button id="btnNav" class="navbar-toggler text-danger" type="button" data-toggle="collapse"
-                    data-target="#collapseNavbar" aria-expanded="false" aria-controls="navbarText"
-                    aria-label="Toggle navigation">
-                    <i class="fas fa-bars"></i>
-                </button>
-
-                <div class="navbar-collapse collapse" id="collapseNavbar">
-                    <div class="card card-body">
-                        <ul class="navbar-nav text-center" id="nav">
-
-                            <li class="nav-item">
-                                <a id="BtnInicioWeb" class="nav-link active js-scroll-trigger enlaces "
-                                    aria-current="page" href="#about">Inicio</a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a href="#funcionamiento" class="nav-link js-scroll-trigger enlaces ">¿Como
-                                    Funciona?</a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a href="#feature" class="nav-link js-scroll-trigger enlaces ">Características</a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a href="#screenshots" class="nav-link js-scroll-trigger enlaces ">Capturas de
-                                    pantalla</a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a href="#descarga" class="nav-link js-scroll-trigger enlaces ">Descargar</a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a href="#opiniones" class="nav-link js-scroll-trigger enlaces ">Opiniones</a>
-                            </li>
-
-                        </ul>
-                    </div>
-                </div>
-
-                <ul class="nav nav-pills mb-2" id="collapseNa">
-                    <li id="BtnInicioCel" class="nav-item"><a
-                            class="nav-link active js-scroll-trigger enlaces linkhome" aria-current="page"
-                            href="#about">Inicio</a></li>
-                    <li class="nav-item"><a href="#funcionamiento"
-                            class="nav-link js-scroll-trigger enlaces linkFuncionamiento">¿Como Funciona?</a></li>
-                    <li class="nav-item"><a href="#feature"
-                            class="nav-link js-scroll-trigger enlaces linkFeature">Características</a></li>
-                    <li class="nav-item"><a href="#screenshots"
-                            class="nav-link js-scroll-trigger enlaces linkscreenshots">Capturas de pantalla</a></li>
-                    <li class="nav-item"><a href="#descarga"
-                            class="nav-link js-scroll-trigger enlaces linkdescarga">Descargar</a></li>
-                    <li class="nav-item"><a href="#opiniones"
-                            class="nav-link js-scroll-trigger enlaces linkopiniones">Opiniones</a></li>
-                </ul>
-
-            </nav>
-        </div>
-    </div> --}}
 
     <!-- seccion 1 -->
     <section class="sectcion1" id="about">
@@ -721,7 +653,7 @@
             slidesToShow: 3,
             slidesToScroll: 1,
             autoplay: true,
-            autoplaySpeed: 2000,
+            autoplaySpeed: 1000,
             responsive: [{
                     breakpoint: 768,
                     settings: {

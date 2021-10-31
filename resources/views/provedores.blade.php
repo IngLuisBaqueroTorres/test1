@@ -55,15 +55,15 @@
     <div class="container">
         <h1 class="text-danger text-bold text-capitalize text-center mt-3">Nuestros Vendedores</h1>
         <div class="row pt-3">
-            @foreach ($provedoresArray as $provedores)
+            @foreach ($users as $provedores)
                 <div class="col-xs-12 col-sm-6 col-md-4">
                     <div class="card border-danger shadow p-3 mb-5 bg-body rounded">
                         <img src="" class="card-img-left" alt="">
                         <div class="card-body text-danger">
-                            <h5 class="card-title">{{ $provedores['name'] }}</h5>
+                            <h5 class="card-title">{{ $provedores['first_name'] }}</h5>
                             <p class="card-text">This is a wider card with supporting text below as a natural
                                 lead-in to additional content. This content is a little bit longer.</p>
-                            <p class="card-text"><small class="text-muted">Valledupar</small></p>
+                            <p class="card-text"><small class="text-muted">{{ $provedores['name'] }}</small></p>
                         </div>
                     </div>
                 </div>
