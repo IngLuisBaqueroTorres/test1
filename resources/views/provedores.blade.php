@@ -58,7 +58,7 @@
             @foreach ($users as $provedores)
                 <div class="col-xs-12 col-sm-6 col-md-4">
                     <a href="{{route('socios.show',$provedores['id'])}}">
-                        <div class="card border-danger shadow p-3 mb-5 bg-body rounded">
+                        <div class="card border-danger shadow p-3 mb-4 bg-body rounded">
                             <img src="" class="card-img-left" alt="">
                             <div class="card-body text-danger">
                                 <h5 class="card-title">{{ $provedores['first_name'] }}</h5>
