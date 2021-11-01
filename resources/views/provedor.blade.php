@@ -23,6 +23,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
         integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
     </script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!--=====================================
         {{-- fontawesome --}}
         ======================================-->
@@ -52,6 +53,18 @@
         </div>
 
         <div class="abajo">
+            <div class="container">
+                <div class="cajaseguir d-flex justify-content-around">
+                    <div class="d-flex flex-column justify-content-center align-items-center">
+                        <i class="fas fa-users"></i>
+                        {{ $seguidores }} Seguidores
+                    </div>
+                    <div class="d-flex flex-column justify-content-center align-items-center" id="seguir">
+                        <i class="fas fa-heart"></i>
+                        Seguir
+                    </div>
+                </div>
+            </div>
             <br><br>
             <p class="card-text text-center">{{ $provedor['description'] }}</p>
         </div>
@@ -98,6 +111,23 @@
         document.body.removeChild(aux);
 
         alert('enlace copiado: ' + window.location);
+    })
+
+    $('#seguir').on('click', function(e) {
+        Swal.fire({
+            title: 'Vive una mejor experiencia',
+            text: "Sigue y haz muchas cosas más, descarga la aplicación en Google Play",
+            icon: 'info',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Descargar',
+            cancelButtonText: 'Cancelar'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                $(location).attr('href','https://play.google.com/store/apps/details?id=com.vomerc.vomerc&hl=es_CO&gl=US');
+            }
+        })
     })
 </script>
 
