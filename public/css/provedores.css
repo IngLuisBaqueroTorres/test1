@@ -14,12 +14,23 @@ body {
     --kcolorPrimario: #FB0d07;
 }
 
+a:link,
+a:visited,
+a:active {
+    text-decoration: none;
+}
+
 .card {
     flex-direction: row !important;
+    transition: all .2s ease-out;
 }
 
 .shadow {
     box-shadow: 8 .5rem 1rem rgba(233, 43, 62, 0.15)!important;
+}
+
+.card:hover {
+    background-color: rgba(247, 132, 132, 0.5) !important;
 }
 
 #buscador {
@@ -253,5 +264,86 @@ footer .acerca h6 {
     100% {
         width: 3rem;
         height: 3rem;
+    }
+}
+
+.fondo {
+    position: relative;
+    height: 100vh;
+    background-color: white;
+}
+
+.abajo {
+    position: absolute;
+    background-color: #dc3545;
+    height: 50%;
+    bottom: 0px;
+    width: 100%;
+    border-radius: 40px 40px 0 0;
+    padding: 20px !important;
+    overflow-x: hidden;
+}
+
+.abajo .card-text {
+    color: white !important;
+    font-family: 'Roboto', sans-serif;
+}
+
+.abajo .card-title {
+    font-weight: bold !important;
+    font-size: 30px;
+}
+
+.fondo .imagen {
+    max-height: 40%;
+}
+
+img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.botones {
+    position: absolute;
+    bottom: 10px;
+    height: 70px;
+    width: 100%;
+    background-color: white;
+    -webkit-box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.75);
+    color: #FB0d07;
+    padding: 10px;
+    border-radius: 25px;
+}
+
+.botones a {
+    color: #FB0d07 !important;
+}
+
+.botones i {
+    font-size: 35px;
+}
+
+.fondo .text-perfil {
+    color: #FB0d07;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+@media (min-width: 920px) {
+    .contenedor {
+        width: 80%;
+        margin: 0 auto;
+    }
+    .abajo {
+        position: absolute;
+        height: 40%;
+        bottom: 0px;
+        width: 100%;
+        border-radius: 40px 40px 0 0;
+        padding: 20px !important;
+        margin-top: 30px;
+        overflow-x: hidden;
     }
 }
