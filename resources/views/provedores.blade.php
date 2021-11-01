@@ -12,16 +12,16 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
     </script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
-        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
-        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
+        integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous">
     </script>
     <!--=====================================
         {{-- fontawesome --}}
@@ -53,27 +53,36 @@
     </div>
 
     <div class="container">
-        <h1 class="text-danger text-bold text-capitalize text-center mt-3">Nuestros Vendedores</h1>
-        <div class="row pt-3">
+        <h2 class="text-danger text-bold text-capitalize text-center mt-3 mb-2">Nuestros Vendedores</h2>
+        <div class="row">
             @foreach ($users as $provedores)
-                <div class="col-xs-12 col-sm-6 col-md-4">
-                    <a href="{{route('socios.show',$provedores['id'])}}">
-                        <div class="card border-danger shadow p-3 mb-4 bg-body rounded">
-                            <img src="" class="card-img-left" alt="">
-                            <div class="card-body text-danger">
-                                <h5 class="card-title">{{ $provedores['first_name'] }}</h5>
-                                <p class="card-text">{{$provedores['description'] }}
-                                    
-                                </p>
-                                <p class="card-text"><small class="text-muted">{{ $provedores['name'] }}</small></p>
+
+                <div class="col-6 col-md-4 mb-3 ">
+                    <a href="{{ route('socios.show', $provedores['id']) }}">
+                        <div class="card">
+                            <img src="{{ $provedores['image'] }}" class="card-img-top" alt="" id="imgvendedor">
+                            <div class="card-body">
+                                <h5 class="card-title" style="font-size: 1.18rem;">{{ $provedores['first_name'] }}</h5>
                             </div>
                         </div>
                     </a>
                 </div>
+
+                {{-- <div class="col-xs-5 col-sm-6 col-md-4">
+                    <a href="{{ route('socios.show', $provedores['id']) }}">
+                        <div class="card shadow mb-4 rounded" id="card">
+                            <img src="{{ $provedores['image'] }}" class="card-img-top" alt="" id="imgvendedor">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ $provedores['first_name'] }}</h5>
+                            </div>
+                        </div>
+                    </a>
+                </div> --}}
             @endforeach
-            {{-- pagination --}}
-            {{$users->onEachSide(2)->links()}}
         </div>
+        {{-- pagination --}}
+        {{ $users->onEachSide(2)->links() }}
+
         <br><br>
     </div>
     {{-- boton arriba --}}
