@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 use App\Models\User;
+use Illuminate\Support\Facades\DB;
 
 class ProvedoresController extends Controller
 {
@@ -34,8 +35,13 @@ class ProvedoresController extends Controller
      */
     public function show($id){ 
         $provedor = User::findOrFail($id);
-
-        return view('provedor',compact('provedor'));
+        $seguidores = DB::table('favorite_user')
+                            ->select('id')
+                            ->where('user_favorite_id', $id)
+                            ->where('favorite',1)
+                            ->count();
+                            
+        return view('provedor',compact(['provedor','seguidores']));
     }
 
 }
