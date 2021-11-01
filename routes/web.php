@@ -22,4 +22,6 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/provedores', [ProvedoresController::class, 'getProvedores'] )->name('socios');
+Route::get('/vendedores', [ProvedoresController::class, 'getProvedores'] )->name('socios');
+
+Route::get('/vendedores/{id}', [ProvedoresController::class, 'show'] )->name('socios.show');

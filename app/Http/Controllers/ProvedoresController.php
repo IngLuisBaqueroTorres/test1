@@ -22,8 +22,20 @@ class ProvedoresController extends Controller
                         ->where('user.state', '=', 'ACTIVE')
                         ->where('product.state', '=', 'ACTIVE')
                         ->orderBy('user.id', 'ASC')
-                        ->get();
+                        ->simplePaginate(9);
 
         return view('provedores',compact('users'));
     }
+
+    /**
+     * traer a un provedor en especifico
+     *
+     * @autor jose kor 31/10/2021
+     */
+    public function show($id){ 
+        $provedor = User::findOrFail($id);
+
+        return view('provedor',compact('provedor'));
+    }
+
 }

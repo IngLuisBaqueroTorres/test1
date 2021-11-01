@@ -159,7 +159,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a href="{{ route('socios') }}"  class="nav-link js-scroll-trigger enlaces linkprovedores">Vendedores</a>
+                    <a href="{{ route('socios') }}"    class="nav-link js-scroll-trigger enlaces linkprovedores">Vendedores</a>
                 </li>
                 
             </ul>
