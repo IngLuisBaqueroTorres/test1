@@ -47,7 +47,7 @@
     <div class="fondo contenedor">
         <br>
         <h2 class="text-perfil text-center">{{ $provedor['first_name'] }}</h2>
-        <div class="imagen d-flex justify-content-center">
+        <div class="imagen d-flex justify-content-center" style="margin-top:30px">
             <img src="{{ $provedor['image'] }}" class="rounded-circle" alt="Cinque Terre" width="180" height="160"
                 alt="...">
         </div>
@@ -56,18 +56,30 @@
             <div class="container">
                 <div class="cajaseguir d-flex justify-content-around">
                     <div class="d-flex flex-column justify-content-center align-items-center">
-                        <i class="fas fa-users"></i>
+                        <i class="fas fa-users fa-2x" ></i>
                         {{ $seguidores }} Seguidores
                     </div>
                     <div class="d-flex flex-column justify-content-center align-items-center" id="seguir">
-                        <i class="fas fa-heart"></i>
+                        <i class="far fa-heart fa-2x"></i>
                         Seguir
                     </div>
                 </div>
             </div>
             <br><br>
-            <p class="card-text text-center">{{ $provedor['description'] }}</p>
+            <p class="card-text text-center" style="font-size: 20px">{{ $provedor['description'] }}</p>
+            <div class="d-flex flex-column justify-content-center align-items-center">
+                
+                <p ><i class="fas fa-mobile-alt fa-lg" style="margin-right: 12px"></i>{{ $provedor['phone'] }}</p>
+            </div>
+
+            <div style="padding-bottom:-10px ">
+                <p style="font-size: 11px">
+                    Vive una mejor experiencia, descarga VOMERC en Google Play. <a href="https://play.google.com/store/apps/details?id=com.vomerc.vomerc">Clic aquí.</a>
+                </p>
+            </div>
         </div>
+        
+        
         <div class="botones d-flex justify-content-around">
             <a href="{{ route('socios') }}">
                 <div class="d-flex flex-column justify-content-center align-items-center">
@@ -76,11 +88,14 @@
                 </div>
             </a>
 
-            <div class="d-flex flex-column justify-content-center align-items-center">
-                <i class="fas fa-shopping-bag"></i>
-                Catálogo
-            </div>
-            <a href="" id="compartir">
+            <a href="{{ route('productos.show', $provedor['id']) }}">
+                <div class="d-flex flex-column justify-content-center align-items-center">
+                    <i class="fas fa-shopping-bag"></i>
+                    Catálogo
+                </div>
+            </a>
+
+            <a id="compartir">
                 <div class="d-flex flex-column justify-content-center align-items-center">
                     <i class="fas fa-share-alt"></i>
                     Compartir
@@ -93,30 +108,50 @@
 </body>
 <script>
     $('#compartir').on('click', function(e) {
-        e.preventDefault();
-        var aux = document.createElement("input");
-        // Asigna el contenido del elemento especificado al valor del campo
-        aux.setAttribute("value", window.location);
+       
+        Swal.fire({
+            title: 'Enlace copiado.',
+            text: "Compártelo a tus amigos en tus redes sociales, chats, estados ¡Donde quieras!",
+            icon: 'info',
+            confirmButtonColor: '#3085d6',
+            confirmButtonText: 'Aceptar',
+        }).then((result) => {
+            if (result.isConfirmed) {
+                var myText = document.createElement("textarea")
+                myText.value = 'https://app.vomerc.com/provider?id={{$provedor['id']}}';
+                document.body.appendChild(myText)
+                myText.focus();
+                myText.select();
+                document.execCommand('copy');
+                document.body.removeChild(myText);
+                // $(location).attr('href','https://vomerc.page.link/provider?id='+$provedor['id']);
+            }
+        })
 
-        // Añade el campo a la página
-        document.body.appendChild(aux);
+        // e.preventDefault();
+        // var aux = document.createElement("input");
+        // // Asigna el contenido del elemento especificado al valor del campo
+        // aux.setAttribute("value", window.location);
 
-        // Selecciona el contenido del campo
-        aux.select();
+        // // Añade el campo a la página
+        // document.body.appendChild(aux);
 
-        // Copia el texto seleccionado
-        document.execCommand("copy");
+        // // Selecciona el contenido del campo
+        // aux.select();
 
-        // Elimina el campo de la página
-        document.body.removeChild(aux);
+        // // Copia el texto seleccionado
+        // document.execCommand("copy");
 
-        alert('enlace copiado: ' + window.location);
+        // // Elimina el campo de la página
+        // document.body.removeChild(aux);
+
+        // alert('enlace copiado: ' + window.location);
     })
 
     $('#seguir').on('click', function(e) {
         Swal.fire({
-            title: 'Vive una mejor experiencia',
-            text: "Sigue y haz muchas cosas más, descarga la aplicación en Google Play",
+            title: 'Para seguir ésta cuenta debes estar registrad@.',
+            text: "Descarga VOMERC desde tu dispositivo Android y vive una mejor experiencia.",
             icon: 'info',
             showCancelButton: true,
             confirmButtonColor: '#3085d6',
@@ -125,7 +160,7 @@
             cancelButtonText: 'Cancelar'
         }).then((result) => {
             if (result.isConfirmed) {
-                $(location).attr('href','https://play.google.com/store/apps/details?id=com.vomerc.vomerc&hl=es_CO&gl=US');
+                $(location).attr('href','https://play.google.com/store/apps/details?id=com.vomerc.vomerc');
             }
         })
     })

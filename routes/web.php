@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProvedoresController;
+use App\Http\Controllers\Select2SearchController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,3 +26,9 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/vendedores', [ProvedoresController::class, 'getProvedores'] )->name('socios');
 
 Route::get('/vendedores/{id}', [ProvedoresController::class, 'show'] )->name('socios.show');
+
+Route::get('/productos/{user_id}', [ProvedoresController::class, 'getProductos'] )->name('productos.show');
+
+Route::get('/vendedores/{city}/{category}', [Select2SearchController::class, 'showProductsActive']);
+
+Route::get('/producto/{id}', [ProvedoresController::class, 'getProducto'] )->name('producto.show');
