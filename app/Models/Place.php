@@ -8,6 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Place extends Model
 {
     protected $fillable = [
-        'name'
+        'id',
+        'name',
+        'created_at',
+        'state'
     ];
 }

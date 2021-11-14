@@ -65,8 +65,7 @@
                     </div>
                 </div>
             </div>
-            <br><br>
-            <p class="card-text text-center" style="font-size: 20px">{{ $provedor['description'] }}</p>
+            <p class="p_class card-text text-center">{{ $provedor['description'] }}</p>
             <div class="d-flex flex-column justify-content-center align-items-center">
                 
                 <p ><i class="fas fa-mobile-alt fa-lg" style="margin-right: 12px"></i>{{ $provedor['phone'] }}</p>
@@ -80,27 +79,33 @@
         </div>
         
         
-        <div class="botones d-flex justify-content-around">
-            <a href="{{ route('socios') }}">
-                <div class="d-flex flex-column justify-content-center align-items-center">
-                    <i class="fas fa-chevron-left"></i>
-                    Atras
-                </div>
-            </a>
+        <div class="botones d-flex justify-content-around row" style="margin-left: 1px">
+            <div class="col">
+                <a href="{{ url()->previous() }}">
+                    <div class="d-flex flex-column justify-content-center align-items-center">
+                        <i class="fas fa-chevron-left"></i>
+                        Atras
+                    </div>
+                </a>
+            </div>
 
-            <a href="{{ route('productos.show', $provedor['id']) }}">
-                <div class="d-flex flex-column justify-content-center align-items-center">
-                    <i class="fas fa-shopping-bag"></i>
-                    Catálogo
-                </div>
-            </a>
+            <div class="col">
+                <a href="{{ route('productos.show', $provedor['id']) }}">
+                    <div class="d-flex flex-column justify-content-center align-items-center">
+                        <i class="fas fa-shopping-bag"></i>
+                        Catálogo
+                    </div>
+                </a>
+            </div>
 
-            <a id="compartir">
-                <div class="d-flex flex-column justify-content-center align-items-center">
-                    <i class="fas fa-share-alt"></i>
-                    Compartir
-                </div>
-            </a>
+            <div class="col">
+                <a id="compartir">
+                    <div class="d-flex flex-column justify-content-center align-items-center">
+                        <i class="fas fa-share-alt"></i>
+                        Compartir
+                    </div>
+                </a>
+            </div>
 
         </div>
     </div>

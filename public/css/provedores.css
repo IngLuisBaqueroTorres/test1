@@ -474,4 +474,31 @@ img#imgvendedor {
     .slick-slide img {
         margin: none;
     }
+    img#imgvendedor {
+        max-height: 150px;
+    }
+    .card_style_text {
+        font-size: 0.8rem;
+        margin-left: 15px;
+        margin-right: 5px;
+        width: 135px;
+        white-space: pre;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        margin-top: 10px;
+        color: #424242;
+    }
+    .p_class {
+        margin-top: 10px;
+        font-size: 15px;
+        max-height: 2.5rem;
+        overflow: hidden;
+        text-align: justify;
+    }
+    .p_class:after {
+        content: '...';
+        position: absolute;
+        top: 6.8rem;
+        right: 1rem;
+    }
 }

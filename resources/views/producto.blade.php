@@ -55,7 +55,6 @@
         <nav class="navbar navbar-light" style="padding-left: 10px">
             <a class="navbar-brand d-flex align-items-center" href="/">
                 <img src="{{ URL::asset('img/logo.png') }}" width="40" height="40" class="d-inline-block align-top ml-2">
-                <h4 style="color: white">Vomerc </h4>
             </a>
         </nav>
     </div>
@@ -89,27 +88,33 @@
             Vive una mejor experiencia, descarga VOMERC en Google Play. <a href="https://play.google.com/store/apps/details?id=com.vomerc.vomerc">Clic aquí.</a>
         </p>
     </div>
-    <div class="botones d-flex justify-content-around">
-        <a href="{{ route('socios') }}">
-            <div class="d-flex flex-column justify-content-center align-items-center">
-                <i class="fas fa-chevron-left"></i>
-                Atras
-            </div>
-        </a>
+    <div class="botones d-flex justify-content-around row" style="margin-left: 1px">
+        <div class="col">
+            <a href="{{ url()->previous() }}">
+                <div class="d-flex flex-column justify-content-center align-items-center">
+                    <i class="fas fa-chevron-left"></i>
+                    Atras
+                </div>
+            </a>
+        </div>
 
-        <a id="seguir">
-            <div class="d-flex flex-column justify-content-center align-items-center">
-                <i class="far fa-heart fa-2x"></i>
-                Seguir
-            </div>
-        </a>
+        <div class="col">
+            <a id="seguir">
+                <div class="d-flex flex-column justify-content-center align-items-center">
+                    <i class="far fa-heart fa-2x"></i>
+                    Seguir
+                </div>
+            </a>
+        </div>
 
-        <a id="sharee">
-            <div class="d-flex flex-column justify-content-center align-items-center">
-                <i class="fas fa-share-alt"></i>
-                Compartir
-            </div>
-        </a>
+        <div class="col">
+            <a id="sharee">
+                <div class="d-flex flex-column justify-content-center align-items-center">
+                    <i class="fas fa-share-alt"></i>
+                    Compartir
+                </div>
+            </a>
+        </div>
     </div>  
 
     <div class="modal fade" id="exampleModal" tabindex="10"  role="dialog" aria-labelledby="exampleModalLabel" >

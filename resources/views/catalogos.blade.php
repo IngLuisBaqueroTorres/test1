@@ -51,7 +51,6 @@
         <nav class="navbar navbar-light" style="padding-left: 10px">
             <a class="navbar-brand d-flex align-items-center" href="/">
                 <img src="{{ URL::asset('img/logo.png') }}" width="40" height="40" class="d-inline-block align-top ml-2">
-                <h4 style="color: white">Vomerc </h4>
             </a>
         </nav>
     </div>
@@ -69,9 +68,9 @@
                         <div class="card">
                             <a href="{{ route('producto.show', $product->id) }}">
                                 <img src="{{ $product->url }}" class="card-img-top" alt="" id="imgvendedor">
-                                <div class="card-body" style="hight:80%">
-                                    <h5 class="card-title" style="font-size: 1.18rem; margin-left:15px; margin-top:10px;">{{ $product->prod_name }}</h5>
-                                    <h5 class="card-title" style="font-size: 1.18rem; margin-left:15px;">$ {{ $product->price }}</h5>
+                                <div  style="hight:80%">
+                                    <h6 class="card_style_text">{{ $product->prod_name }}</h6>
+                                    <h6 class="card_style_text">$ {{ $product->price }}</h6>
                                 </div>
                             </a>
                         </div>

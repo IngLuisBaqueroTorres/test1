@@ -47,13 +47,12 @@
         <nav class="navbar navbar-light" style="padding-left: 10px">
             <a class="navbar-brand d-flex align-items-center" href="/">
                 <img src="{{ URL::asset('img/logo.png') }}" width="40" height="40" class="d-inline-block align-top ml-2">
-                <h4 style="color: white">Vomerc </h4>
             </a>
         </nav>
         <div class="row" id="buscador" style="width: 100%">
             <div class="container-1">
                 <span class="icon"><i class="fa fa-map-marker-alt" aria-hidden="true"></i></span>
-                <select class="livesearch form-control" name = "place" id = "place" lang="es"></select>                
+                <select class="livesearch form-control"  name = "place" id = "place" lang="es"></select>                
             </div>
             <div class="container-1">
                 <span class="icon"><i class="fa fa-tag" aria-hidden="true"></i></span>
@@ -76,7 +75,7 @@
                         <a href="{{ route('socios.show', $provedores['id']) }}">
                             <img src="{{ $provedores['image'] }}" class="card-img-top" alt="" id="imgvendedor">
                             <div class="card-body">
-                                <h5 class="card-title" style="font-size: 1.18rem;">{{ $provedores['first_name'] }}</h5>
+                                <h5 class="card_style_text" style="font-size: 1.18rem;">{{ $provedores['first_name'] }}</h5>
                             </div>
                         </a>
                     </div>

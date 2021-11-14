@@ -20,7 +20,7 @@ class Select2SearchController extends Controller
 
         if($request->has('q')){
             $search = $request->q;
-            
+            // $searching = Place::where(DB::raw('upper(name)'), 'LIKE', '%search%')->get();
             $searching = DB::table('city')
                             ->select("id", "name")
                             ->where('name', 'LIKE', "%$search%")
